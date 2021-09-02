@@ -17,14 +17,15 @@ public class Lab1 {
 	double s = 0;
 
 	label: for (int i = a; i <= n; i++) {
-	    for (int j = b; j <= m; j++) {
+	    int signifier = i + C;
 
-		// Checking for errors
-		if (i == -2) {
-		    System.out.println("Error. Zero division is not allowed");
-		    break label;
-		} else {
-		    s += ((float) i * j / (i + C));
+	    // Checking for errors
+	    if (signifier == 0) {
+		System.out.println("Error. Zero division is not allowed");
+		break label;
+	    } else {
+		for (int j = b; j <= m; j++) {
+		    s += (float) (i * j) / signifier;
 		}
 	    }
 

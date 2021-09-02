@@ -24,7 +24,7 @@ public class Lab1 {
 		    System.out.println("Error. Zero division is not allowed");
 		    break label;
 		} else {
-		    s += (i * j / (i + C));
+		    s += ((float) i * j / (i + C));
 		}
 	    }
 

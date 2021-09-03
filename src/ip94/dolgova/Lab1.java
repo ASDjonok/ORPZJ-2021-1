@@ -8,30 +8,27 @@ public class Lab1 {
 	int a = 2;
 	int b = -5;
 	int m = 10;
-	int n = 10;
+	int n = 15;
 
 	// Constant found by dividing the variant number
-	final int C = 2;
+	final int C = 9410 % 3;
 
 	// Result
 	double s = 0;
 
-	label: for (int i = a; i <= n; i++) {
-	    int signifier = i + C;
+	if (n < a || m < b) {
+	    s = 0;
+	} else if (a > -2 || n < -2) {
 
-	    // Checking for errors
-	    if (signifier == 0) {
-		System.out.println("Error. Zero division is not allowed");
-		break label;
-	    } else {
+	    for (int i = a; i <= n; i++) {
+		int signifier = i + C;
 		for (int j = b; j <= m; j++) {
 		    s += (float) (i * j) / signifier;
 		}
 	    }
-
+	    System.out.println("S = " + s);
+	} else {
+	    System.out.println("Error. Zero division is not allowed");
 	}
-
-	System.out.println("S = " + s);
     }
-
 }

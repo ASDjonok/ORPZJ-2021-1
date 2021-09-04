@@ -14,11 +14,11 @@ public class Lab1 {
 	final int C = 9410 % 3;
 
 	// Result
-	double s = 0;
+	float s = 0;
 
 	if (n < a || m < b) {
-	    s = 0;
-	} else if (a > -2 || n < -2) {
+	    System.out.println("S = " + s);
+	} else if (a > -C || n < -C) {
 
 	    for (int i = a; i <= n; i++) {
 		int signifier = i + C;

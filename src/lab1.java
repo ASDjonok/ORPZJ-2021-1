@@ -20,12 +20,12 @@ public class lab1 {
 
         if (n < a || m < b || a < 0 || b < 0 || n < 0 || m < 0) {
             System.out.println("S = " + s);
-        } else if (a > -C || n < -C) {
+        } else if (a > -C /*|| n < -C*/) { // in case that number always positive
 
-            for (long i = (long) a; i <= (long)n; i++) {
+            for (long i = /*(long) */a; i <= /*(long)*/n; i++) {
                 long num = i - C;
-                for (long j = (long)b; j <= m; j++) {
-                    s += (float) (i / j) / num;
+                for (long j = /*(long)*/b; j <= m; j++) {
+                    s +=  (float) i / j / num;
                 }
             }
             System.out.println("S = " + s);

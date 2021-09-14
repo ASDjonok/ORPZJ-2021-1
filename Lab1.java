@@ -1,6 +1,6 @@
 package ia91.gritsenko;
 
-public class Main {
+public class Lab1 {
 
 	public static void main(String[] args) {
 		int zalik_book = 9106;

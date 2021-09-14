@@ -18,6 +18,11 @@ public class Lab3 {
 
 	int[] numSentences = new int[words.length];
 
+	// Error handling
+	if (words.length == 0) {
+	    System.out.println("There are no words to check");
+	}
+
 	for (int i = 0; i < textSplit.length; i++) {
 	    for (int j = 0; j < words.length; j++) {
 		if (textSplit[i].contains(words[j]))

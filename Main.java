@@ -25,14 +25,14 @@ public class Main {
 
 		if(n < a || m < b){
 			System.out.println("Відповідь: "+ finalSum);
-		}else if(a > -c){
+		}else if(a > -c || n < -c){
 			// C7 = 6, тоді за умовою тип індексів i та j: double
 			for(double i = a; i <= n; i++){
 				// C2 = 0, тоді за умовою операція O1: +
 				double znam = i + c;
 				for(double j = b; j <= m; j++){
 					// C5 = 1, тоді за умовою операція O2: /
-					finalSum += (float) (i / j) / znam;
+					finalSum += (i / j) / znam;
 				}
 			}
 			System.out.println("Відповідь: " + finalSum);

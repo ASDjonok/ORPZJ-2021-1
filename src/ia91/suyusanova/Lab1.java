@@ -31,7 +31,7 @@ public class Lab1 {
             for (float i = a; i <= n; i++) {
                 float num = i + C;
                 for (float j = b; j <= m; j++) {
-                    sum += (float) (i/j) / num;
+                    sum += (i/j) / num;
                 }
             }
             System.out.println("Sum = " + sum);;

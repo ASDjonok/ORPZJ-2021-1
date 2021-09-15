@@ -28,12 +28,6 @@ public class Lab2 {
 
         System.out.println("------------------------------");
 
-        int elAmount = 0;
-        for(int i = 0; i < b.length; i++){
-            elAmount += 1;
-        }
-        System.out.println("Кількість елементів у стовпці: " + elAmount);
-
         //С11 = 9, тому потрібно знайти середнє значення елементів кожного стовпчика матриці.
         float sumColumn1;
         for(int i = 0; i < b[0].length; i++){
@@ -42,20 +36,8 @@ public class Lab2 {
                 sumColumn1 = sumColumn1 + b[j][i];
             }
             System.out.println("Сума значень " + i + " стовпця: " + sumColumn1);
-            float result = sumColumn1/elAmount;
+            float result = sumColumn1/b.length;
             System.out.println("Середнє значення серед " + i + " стовпця: " + result);
         }
     }
 }
-
-
-//        float sum1 = 0.0f;
-//        float sum2 = 0.0f;
-
-//        for(int i = 0; i < b.length; i++) {
-//            sum1 += b[i][0] / (float)elAmount;
-//            sum2 += b[i][1] / (float)elAmount;
-//        }
-//        System.out.println("Середнє значення серед першого стовця: " + sum1);
-//        System.out.println("Середнє значення серед другого стовця: " + sum2);
-

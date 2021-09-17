@@ -5,7 +5,7 @@ import java.util.Arrays;
  * Клас слугує для зберігання масиву об'єктів-студентів з властивостями
  *
  * @author Анастасія Гриценко
- * @version 1.0
+ * @version 1.0 17 Sep 2021
  */
 public class Student {
     /**

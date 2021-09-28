@@ -13,10 +13,7 @@ public class Lab4 {
 	Clothes[] clothes = new Clothes[] { shirt, jeans, jacket, dress };
 
 	System.out.println("Initial array");
-
-	for (int i = 0; i < clothes.length; i++) {
-	    System.out.println(clothes[i].toString());
-	}
+	printArray(clothes);
 
 	Arrays.sort(clothes, new Comparator<Clothes>() {
 	    public int compare(Clothes o1, Clothes o2) {
@@ -26,10 +23,7 @@ public class Lab4 {
 
 	System.out.println();
 	System.out.println("Sorting by name");
-
-	for (int i = 0; i < clothes.length; i++) {
-	    System.out.println(clothes[i].toString());
-	}
+	printArray(clothes);
 
 	Arrays.sort(clothes, Collections.reverseOrder(new Comparator<Clothes>() {
 	    public int compare(Clothes o1, Clothes o2) {
@@ -39,8 +33,12 @@ public class Lab4 {
 
 	System.out.println();
 	System.out.println("Sorting by length in a reverse order");
-	for (int i = 0; i < clothes.length; i++) {
-	    System.out.println(clothes[i].toString());
+	printArray(clothes);
+    }
+
+    private static void printArray(Clothes[] array) {
+	for (int i = 0; i < array.length; i++) {
+	    System.out.println(array[i]);
 	}
     }
 }

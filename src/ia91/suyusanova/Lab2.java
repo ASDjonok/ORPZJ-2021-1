@@ -11,6 +11,7 @@ public class Lab2 {
         System.out.println("С5 = " + z);
         System.out.println("С7 = " + q);
         System.out.println("С11 = " + x);
+        System.out.println();
 
         //Используем тип данных char для элементов матрицы.
         char[][] matrix = {{'2', '5', '8'}, {'1', '7', '3'}, {'4', '9', '6'}};
@@ -60,7 +61,7 @@ public class Lab2 {
             }
             sum2 += Character.getNumericValue(min);
         }
-        
+
         System.out.println();
         System.out.println("Сумма наибольших элементов в столбцах матрицы с непарными номерами: " + sum1);
         System.out.println("Сумма наименьших элементов в столбцах матрицы с парными номерами: " + sum2);

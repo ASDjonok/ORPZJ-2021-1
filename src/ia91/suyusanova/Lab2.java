@@ -25,7 +25,6 @@ public class Lab2 {
         }
 
         //First task
-        //Значения новой матрицы заполняются значениями из старой матрицы. Содержимое ячейки [i][j] записывается в ячейку [j][i]
         System.out.println("Транспонированная матрица: ");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -61,8 +60,9 @@ public class Lab2 {
             }
             sum2 += Character.getNumericValue(min);
         }
+        
         System.out.println();
-        System.out.println(sum1);
-        System.out.println(sum2);
+        System.out.println("Сумма наибольших элементов в столбцах матрицы с непарными номерами: " + sum1);
+        System.out.println("Сумма наименьших элементов в столбцах матрицы с парными номерами: " + sum2);
     }
 }

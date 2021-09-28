@@ -17,8 +17,8 @@ public class Lab2 {
         char[][] A = new char[3][3];
 
         System.out.println("Изначальная матрица: ");
-        for (char i = 0; i < 3; i++) {  //идём по строкам
-            for (char j = 0; j < 3; j++) {//идём по столбцам
+        for (int i = 0; i < 3; i++) {  //идём по строкам
+            for (int j = 0; j < 3; j++) {//идём по столбцам
                 System.out.print(" " + matrix[i][j] + " "); //вывод элемента
             }
             System.out.println();//перенос строки ради визуального сохранения табличной формы
@@ -27,34 +27,34 @@ public class Lab2 {
         //First task
         //Значения новой матрицы заполняются значениями из старой матрицы. Содержимое ячейки [i][j] записывается в ячейку [j][i]
         System.out.println("Транспонированная матрица: ");
-        for (char i = 0; i < 3; i++) {
-            for (char j = 0; j < 3; j++) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
                 A[i][j] = matrix[j][i];
             }
         }
-        for (char i = 0; i < 3; i++) {
-            for (char j = 0; j < 3; j++) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
                 System.out.print(" " + A[i][j] + " ");
             }
             System.out.println();
         }
 
         //Second task
-        char sum1 = 0;
-        char sum2 = 0;
+        int sum1 = 0;
+        int sum2 = 0;
 
-        for (char j = 0; j < 3; j += 2) {
-            char max = A[0][j];
-            for (char i = 1; i < 3; i++) {
+        for (int j = 0; j < 3; j += 2) {
+            int max = A[0][j];
+            for (int i = 1; i < 3; i++) {
                 if (A[i][j] > max)
                     max = A[i][j];
             }
             sum1 += max;
         }
 
-        for (char j = 1; j < 3; j += 2) {
-            char min = A[0][j];
-            for (char i = 1; i < 3; i++) {
+        for (int j = 1; j < 3; j += 2) {
+            int min = A[0][j];
+            for (int i = 1; i < 3; i++) {
                 if (A[i][j] < min)
                     min = A[i][j];
             }

@@ -40,8 +40,8 @@ public class Lab2 {
         }
 
         //Second task
-        int sum1 = 0;
-        int sum2 = 0;
+        char sum1 = 0;
+        char sum2 = 0;
 
         for (int j = 0; j < 3; j += 2) {
             int max = A[0][j];

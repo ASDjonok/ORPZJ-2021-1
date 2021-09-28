@@ -27,7 +27,7 @@ public class Lab1 {
         if (n<a || m<b) {
             System.out.println("Sum = " + sum);
         }
-        else if (a>-C || n<-C) && (b>0 || m<0) {
+        else if ((a>-C || n<-C) && (b>0 || m<0)) {
             for (float i = a; i <= n; i++) {
                 float num = i + C;
                 for (float j = b; j <= m; j++) {

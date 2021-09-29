@@ -14,25 +14,27 @@ public class Lab2 {
         System.out.println();
 
         //Используем тип данных char для элементов матрицы.
-        char[][] matrix = {{'2', '5', '8'}, {'1', '7', '3'}, {'4', '9', '6'}};
-        char[][] A = new char[3][3];
+        char[][] matrix = {{'2', '5', '8', '1'}, {'1', '7', '3', '4'}, {'3', '9', '5', '2'}};
+        char[][] A = new char[4][3];
 
         System.out.println("Изначальная матрица: ");
-        for (int i = 0; i < 3; i++) {  //идём по строкам
-            for (int j = 0; j < 3; j++) {//идём по столбцам
+        for (int i = 0; i < matrix.length; i++) {  //идём по строкам
+            for (int j = 0; j < matrix[i].length; j++) {//идём по столбцам
                 System.out.print(" " + matrix[i][j] + " "); //вывод элемента
             }
             System.out.println();//перенос строки ради визуального сохранения табличной формы
         }
 
         //First task
+        //Значения новой матрицы заполняются значениями из старой матрицы. Содержимое ячейки [i][j] записывается в ячейку [j][i]
         System.out.println("Транспонированная матрица: ");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 3; j++) {
                 A[i][j] = matrix[j][i];
             }
         }
-        for (int i = 0; i < 3; i++) {
+        
+        for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 3; j++) {
                 System.out.print(" " + A[i][j] + " ");
             }
@@ -43,9 +45,9 @@ public class Lab2 {
         int sum1 = 0;
         int sum2 = 0;
 
-        for (int j = 0; j < 3; j += 2) {
+        for (int j = 0; j < matrix.length; j += 2) {
             char max = A[0][j];
-            for (int i = 1; i < 3; i++) {
+            for (int i = 1; i < matrix.length; i++) {
                 if (A[i][j] > max) {
                     max = A[i][j];
                 }
@@ -53,9 +55,9 @@ public class Lab2 {
             sum1 += Character.getNumericValue(max);
         }
 
-        for (int j = 1; j < 3; j += 2) {
+        for (int j = 1; j < matrix.length; j += 2) {
             char min = A[0][j];
-            for (int i = 1; i < 3; i++) {
+            for (int i = 1; i < matrix.length; i++) {
                 if (A[i][j] < min)
                     min = A[i][j];
             }

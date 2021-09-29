@@ -18,14 +18,13 @@ public class lab1 {
 
         float s = 0;
 
-        if (n < a || m < b || a < 0 || b < 0 || n < 0 || m < 0) {
+        if (n < a || m < b) {
             System.out.println("S = " + s);
-        } else if (a > -C || n < -C) {
-
-            for (long i = (long) a; i <= (long)n; i++) {
+        } else if ((a > -C || n < -C) && (b > 0 || m < 0)) {
+            for (long i = a; i <= n; i++) {
                 long num = i - C;
-                for (long j = (long)b; j <= m; j++) {
-                    s += (float) (i / j) / num;
+                for (long j = b; j <= m; j++) {
+                    s += (float) i / j / num;
                 }
             }
             System.out.println("S = " + s);

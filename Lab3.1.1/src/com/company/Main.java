@@ -1,7 +1,6 @@
 package com.company;
 
 public class Main {
-
     public static void main(String[] args) {
         //Вариант 9108
         //Операция О1 +
@@ -10,7 +9,7 @@ public class Main {
         //Тип индексов i и j short
         // (i + j) / (i + 0)
         final short a = 4;
-        final short b = -10;
+        final short b = 10;
         final short n = 10;
         final short m = -2;
         final short C = 0; //константа
@@ -20,22 +19,18 @@ public class Main {
             System.out.println("Неправильные параметры сумы ");
         } else {
             boolean isCountable = true;
-
-            for (short i = a; i <= n; i++) {
-                if (i + C == 0) {
-                    System.out.println("Ноль в знаменателе");
-                    isCountable = false; //ставим метку что не возможно посчитать сумму
-                    break; //если знаменатель равен 0 выходим из циклов
+            if ((a + C <= 0) && (b + C >= 0)) {
+                System.out.println("Ноль в знаменателе");
+            }else {
+                for (short i = a; i <= n; i++) {
+                    short znam = (short) (i + C);
+                    for (short j = b; j <= m; j++) {
+                        result += (float) (i + j) / znam;
+                    }
                 }
-                short znam = (short) (i + C);
-                for (short j = b; j <= m; j++) {
-                    result += (float) (i + j) / znam;
-                }
-            }
-
-            if (isCountable == true) {
                 System.out.println("Результат " + result);
             }
+
         }
     }
 }

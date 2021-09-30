@@ -10,15 +10,15 @@ import java.util.Comparator;
  */
 public class Student {
     /** Поле Имя */
-    String Name;
+    private String name;
     /** Поле Фамилия */
-    String Surname;
+    private String surname;
     /** Поле Отчество */
-    String Patronymic;
+    private String patronymic;
     /** Поле номер зачетной книжки */
-    String RecordBook;
+    private String recordBook;
     /** Поле Оценка */
-    Integer Grade;
+    private Integer grade;
 
     /**
      * Конструктор - создание нового обьекта студента с значениями
@@ -29,11 +29,11 @@ public class Student {
      * @param grade - Оценко
      */
     public Student(String name, String surname, String patronymic, String recordBook, Integer grade) {
-        this.Name = name;
-        this.Surname = surname;
-        this.Patronymic = patronymic;
-        this.RecordBook = recordBook;
-        this.Grade = grade;
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+        this.recordBook = recordBook;
+        this.grade = grade;
     }
     /**
      * Главная функция
@@ -79,7 +79,7 @@ public class Student {
      * @return возвращает Имя студента
      */
     public String getName() {
-        return Name;
+        return this.name;
     }
 
     /**
@@ -87,7 +87,7 @@ public class Student {
      * @return возвращает Фамилию студента
      */
     public String getSurname() {
-        return Surname;
+        return this.surname;
     }
 
     /**
@@ -95,7 +95,7 @@ public class Student {
      * @return возвращает Отчество студента
      */
     public String getPatronymic() {
-        return Patronymic;
+        return this.patronymic;
     }
 
     /**
@@ -103,7 +103,7 @@ public class Student {
      * @return возвращает Номер зачет ной книжки студента
      */
     public String getRecordBook() {
-        return RecordBook;
+        return this.recordBook;
     }
 
     /**
@@ -111,7 +111,7 @@ public class Student {
      * @return возвращает Оценку студента
      */
     public Integer getGrade() {
-        return Grade;
+        return this.grade;
     }
 
     /**
@@ -121,10 +121,10 @@ public class Student {
     @Override
     public String toString() {
         return "СТУДЕНТ " +
-                "Фамилия: " + Surname +
-                ", Имя: " + Name +
-                ", Отчество: " + Patronymic +
-                ", Зачетная книжка: " + RecordBook +
-                ", Балл: " + Grade;
+                "Фамилия: " + this.surname +
+                ", Имя: " + this.name +
+                ", Отчество: " + this.patronymic +
+                ", Зачетная книжка: " + this.recordBook +
+                ", Балл: " + this.grade;
     }
 }

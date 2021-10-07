@@ -4,13 +4,28 @@ package ip94.dolgova.Lab4;
  * Clothes class
  * 
  * @autor Yelyzaveta Dolhova
- * @version 1.0
+ * @version 1.1 7 Oct 2021
  */
 public class Clothes {
+    /**
+     * Field - name
+     */
     String name;
+    /**
+     * Field - color
+     */
     String color;
+    /**
+     * Field - size
+     */
     int size;
+    /**
+     * Field - length
+     */
     int length;
+    /**
+     * Field - width
+     */
     int width;
 
     /**
@@ -22,12 +37,12 @@ public class Clothes {
      * @param l length
      * @param w width
      */
-    Clothes(String n, String c, int s, int l, int w) {
-	name = n;
-	color = c;
-	size = s;
-	length = l;
-	width = w;
+    Clothes(String name, String color, int size, int length, int width) {
+	this.name = name;
+	this.color = color;
+	this.size = size;
+	this.length = length;
+	this.width = width;
     }
 
     /**

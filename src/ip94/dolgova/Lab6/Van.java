@@ -1,5 +1,7 @@
 package ip94.dolgova.Lab6;
 
+import java.util.Arrays;
+
 /**
  * Клас слугує для задання Фургону
  *
@@ -10,11 +12,11 @@ public class Van {
     /**
      * Поле - можлива вага погрузки
      */
-    public int availableWeight;
+    private int availableWeight;
     /**
      * Поле - вміст
      */
-    public Coffee[] content;
+    private Coffee[] content;
 
     /**
      * Конструктор - створення нового об'єкту з певними значеннями
@@ -22,7 +24,7 @@ public class Van {
      * @param availableWeight можлива вага погрузки
      */
     public Van(int availableWeight) {
-	this.availableWeight = availableWeight;
+	this.setAvailableWeight(availableWeight);
     }
 
     /**
@@ -33,5 +35,21 @@ public class Van {
 	    System.out.println("Item " + i);
 	    System.out.println(content[i].toString());
 	}
+    }
+
+    public int getAvailableWeight() {
+	return availableWeight;
+    }
+
+    public void setAvailableWeight(int availableWeight) {
+	this.availableWeight = availableWeight;
+    }
+
+    public Coffee[] getContent() {
+	return content;
+    }
+
+    public void setContent(Coffee[] content) {
+	this.content = content;
     }
 }

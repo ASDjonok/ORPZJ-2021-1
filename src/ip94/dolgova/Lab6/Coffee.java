@@ -10,23 +10,23 @@ public class Coffee {
     /**
      * Поле - упаковка
      */
-    public String packing;
+    private String packing;
     /**
      * Поле - стан
      */
-    public String state;
+    private String state;
     /**
      * Поле - вага
      */
-    public int weight;
+    private int weight;
     /**
      * Поле - ціна за кг
      */
-    public int pricePerKg;
+    private int pricePerKg;
     /**
      * Поле - якість
      */
-    public int quality;
+    private int quality;
 
     /**
      * Конструктор - створення нового об'єкту з певними значеннями
@@ -38,11 +38,11 @@ public class Coffee {
      * @param quality    якість (від 1 до 10)
      */
     public Coffee(String packing, String state, int weight, int pricePerKg, int quality) {
-	this.packing = packing;
-	this.state = state;
-	this.weight = weight;
+	this.setPacking(packing);
+	this.setState(state);
+	this.setWeight(weight);
 	this.pricePerKg = pricePerKg;
-	this.quality = quality;
+	this.setQuality(quality);
     }
 
     /**
@@ -50,5 +50,45 @@ public class Coffee {
      */
     public int countTotalPrice() {
 	return this.weight * this.pricePerKg;
+    }
+
+    public String getPacking() {
+	return packing;
+    }
+
+    public void setPacking(String packing) {
+	this.packing = packing;
+    }
+
+    public String getState() {
+	return state;
+    }
+
+    public void setState(String state) {
+	this.state = state;
+    }
+
+    public int getQuality() {
+	return quality;
+    }
+
+    public void setQuality(int quality) {
+	this.quality = quality;
+    }
+
+    public int getWeight() {
+	return weight;
+    }
+
+    public void setWeight(int weight) {
+	this.weight = weight;
+    }
+
+    public int getPrice() {
+	return pricePerKg;
+    }
+
+    public void setPrice(int price) {
+	this.pricePerKg = price;
     }
 }

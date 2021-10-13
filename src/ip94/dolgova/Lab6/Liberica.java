@@ -40,11 +40,11 @@ public class Liberica extends Coffee {
     public String toString() {
 	final StringBuffer sb = new StringBuffer("");
 	sb.append("Liberica. ");
-	sb.append("Packing: ").append(packing);
-	sb.append("; state: ").append(state);
-	sb.append("; weight: ").append(weight);
-	sb.append("; pricePerKg: ").append(pricePerKg);
-	sb.append("; quality: ").append(quality);
+	sb.append("Packing: ").append(getPacking());
+	sb.append("; state: ").append(getState());
+	sb.append("; weight: ").append(getWeight());
+	sb.append("; pricePerKg: ").append(getPrice());
+	sb.append("; quality: ").append(getQuality());
 	sb.append("; placeOfGrowth: ").append(placeOfGrowth);
 	sb.append("; bitterness: ").append(bitterness);
 	sb.append("; caffeine: ").append(caffeine);

@@ -12,8 +12,8 @@ public class Lab6 {
     /**
      * Змінні для кодів кольорів ANSI
      */
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_GREEN = "\u001B[32m";
+    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String ANSI_GREEN = "\u001B[32m";
 
     /**
      * Головний метод програми. Створює масив з об'єктами класів {@link Arabica},
@@ -43,15 +43,15 @@ public class Lab6 {
 
 	int uploadedWeight = 0;
 	for (Coffee item : coffeeToSell) {
-	    if (uploadedWeight < van.availableWeight) {
+	    if (uploadedWeight < van.getAvailableWeight()) {
 		myList.add(item);
-		uploadedWeight += item.weight;
+		uploadedWeight += item.getWeight();
 	    } else {
 		break;
 	    }
 	}
 	// Adding to the van
-	van.content = myList.toArray(coffeeToSell);
+	van.setContent(myList.toArray(coffeeToSell));
 
 	System.out.println("The van is full with the weight: " + uploadedWeight);
 
@@ -68,7 +68,7 @@ public class Lab6 {
 	System.out.println(ANSI_GREEN + "Printing out coffee with quality between 4 and 7" + ANSI_RESET);
 
 	for (Coffee item : myList) {
-	    if ((item.quality >= 4) && (item.quality <= 7)) {
+	    if ((item.getQuality() >= 4) && (item.getQuality() <= 7)) {
 		System.out.println(item);
 	    }
 	}

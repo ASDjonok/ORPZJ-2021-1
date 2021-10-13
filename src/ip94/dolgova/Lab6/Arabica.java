@@ -10,15 +10,15 @@ public class Arabica extends Coffee {
     /**
      * Поле - місце росту
      */
-    private String placeOfGrowth = "Africa, North America, South America";
+    private static String Arabica_PlaceOf_Growth = "Africa, North America, South America";
     /**
      * Поле - гіркота (від 1 до 5)
      */
-    private int bitterness = 1;
+    private static int Arabica_Bitterness = 1;
     /**
      * Поле - вмість кофеїну (у мг)
      */
-    private int caffeine = 38;
+    private static int Arabica_Caffeine = 38;
 
     /**
      * Конструктор - створення нового об'єкту з певними значеннями
@@ -31,6 +31,9 @@ public class Arabica extends Coffee {
      */
     public Arabica(String packing, String state, int weight, int pricePerKg, int quality) {
 	super(packing, state, weight, pricePerKg, quality);
+	setPlaceOfGrowth(Arabica_PlaceOf_Growth);
+	setBitterness(Arabica_Bitterness);
+	setCaffeine(Arabica_Caffeine);
     }
 
     /**
@@ -45,9 +48,9 @@ public class Arabica extends Coffee {
 	sb.append("; weight: ").append(getWeight());
 	sb.append("; pricePerKg: ").append(getPrice());
 	sb.append("; quality: ").append(getQuality());
-	sb.append("; placeOfGrowth: ").append(placeOfGrowth);
-	sb.append("; bitterness: ").append(bitterness);
-	sb.append("; caffeine: ").append(caffeine);
+	sb.append("; placeOfGrowth: ").append(getPlaceOfGrowth());
+	sb.append("; bitterness: ").append(getBitterness());
+	sb.append("; caffeine: ").append(getCaffeine());
 	return sb.toString();
     }
 

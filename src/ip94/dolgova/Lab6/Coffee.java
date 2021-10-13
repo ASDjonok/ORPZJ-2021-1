@@ -28,6 +28,12 @@ public class Coffee {
      */
     private int quality;
 
+    private String placeOfGrowth;
+
+    private int bitterness;
+
+    private int caffeine;
+
     /**
      * Конструктор - створення нового об'єкту з певними значеннями
      *
@@ -38,11 +44,11 @@ public class Coffee {
      * @param quality    якість (від 1 до 10)
      */
     public Coffee(String packing, String state, int weight, int pricePerKg, int quality) {
-	this.setPacking(packing);
-	this.setState(state);
-	this.setWeight(weight);
-	this.pricePerKg = pricePerKg;
-	this.setQuality(quality);
+	setPacking(packing);
+	setState(state);
+	setWeight(weight);
+	setPrice(pricePerKg);
+	setQuality(quality);
     }
 
     /**
@@ -51,6 +57,10 @@ public class Coffee {
     public int countTotalPrice() {
 	return this.weight * this.pricePerKg;
     }
+
+    /**
+     * Геттери та сеттери для приватних полів
+     */
 
     public String getPacking() {
 	return packing;
@@ -90,5 +100,29 @@ public class Coffee {
 
     public void setPrice(int price) {
 	this.pricePerKg = price;
+    }
+
+    public String getPlaceOfGrowth() {
+	return placeOfGrowth;
+    }
+
+    public void setPlaceOfGrowth(String placeOfGrowth) {
+	this.placeOfGrowth = placeOfGrowth;
+    }
+
+    public int getBitterness() {
+	return bitterness;
+    }
+
+    public void setBitterness(int bitterness) {
+	this.bitterness = bitterness;
+    }
+
+    public int getCaffeine() {
+	return caffeine;
+    }
+
+    public void setCaffeine(int caffeine) {
+	this.caffeine = caffeine;
     }
 }

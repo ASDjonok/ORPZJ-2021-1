@@ -11,15 +11,15 @@ public class Excelsa extends Coffee {
     /**
      * Поле - місце росту
      */
-    private String placeOfGrowth = "Central Africa, Asia";
+    private static String Excelsa_PlaceOf_Growth = "Central Africa, Asia";
     /**
      * Поле - гіркота (від 1 до 5)
      */
-    private int bitterness = 3;
+    private static int Excelsa_Bitterness = 3;
     /**
      * Поле - вмість кофеїну (у мг)
      */
-    private int caffeine = 52;
+    private static int Excelsa_Caffeine = 52;
 
     /**
      * Конструктор - створення нового об'єкту з певними значеннями
@@ -32,6 +32,9 @@ public class Excelsa extends Coffee {
      */
     public Excelsa(String packing, String state, int weight, int pricePerKg, int quality) {
 	super(packing, state, weight, pricePerKg, quality);
+	setPlaceOfGrowth(Excelsa_PlaceOf_Growth);
+	setBitterness(Excelsa_Bitterness);
+	setCaffeine(Excelsa_Caffeine);
     }
 
     /**
@@ -46,9 +49,9 @@ public class Excelsa extends Coffee {
 	sb.append("; weight: ").append(getWeight());
 	sb.append("; pricePerKg: ").append(getPrice());
 	sb.append("; quality: ").append(getQuality());
-	sb.append("; placeOfGrowth: ").append(placeOfGrowth);
-	sb.append("; bitterness: ").append(bitterness);
-	sb.append("; caffeine: ").append(caffeine);
+	sb.append("; placeOfGrowth: ").append(getPlaceOfGrowth());
+	sb.append("; bitterness: ").append(getBitterness());
+	sb.append("; caffeine: ").append(getCaffeine());
 	return sb.toString();
     }
 }

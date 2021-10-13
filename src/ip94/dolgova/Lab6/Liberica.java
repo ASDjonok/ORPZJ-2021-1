@@ -10,15 +10,15 @@ public class Liberica extends Coffee {
     /**
      * Поле - місце росту
      */
-    private String placeOfGrowth = "Africa, Asia";
+    private static String Liberica_PlaceOf_Growth = "Africa, Asia";
     /**
      * Поле - гіркота (від 1 до 5)
      */
-    private int bitterness = 2;
+    private static int Liberica_Bitterness = 2;
     /**
      * Поле - вмість кофеїну (у мг)
      */
-    private int caffeine = 47;
+    private static int Liberica_Caffeine = 47;
 
     /**
      * Конструктор - створення нового об'єкту з певними значеннями
@@ -31,6 +31,9 @@ public class Liberica extends Coffee {
      */
     public Liberica(String packing, String state, int weight, int pricePerKg, int quality) {
 	super(packing, state, weight, pricePerKg, quality);
+	setPlaceOfGrowth(Liberica_PlaceOf_Growth);
+	setBitterness(Liberica_Bitterness);
+	setCaffeine(Liberica_Caffeine);
     }
 
     /**
@@ -45,9 +48,9 @@ public class Liberica extends Coffee {
 	sb.append("; weight: ").append(getWeight());
 	sb.append("; pricePerKg: ").append(getPrice());
 	sb.append("; quality: ").append(getQuality());
-	sb.append("; placeOfGrowth: ").append(placeOfGrowth);
-	sb.append("; bitterness: ").append(bitterness);
-	sb.append("; caffeine: ").append(caffeine);
+	sb.append("; placeOfGrowth: ").append(getPlaceOfGrowth());
+	sb.append("; bitterness: ").append(getBitterness());
+	sb.append("; caffeine: ").append(getCaffeine());
 	return sb.toString();
     }
 }

@@ -10,15 +10,15 @@ public class Stenofilla extends Coffee {
     /**
      * Поле - місце росту
      */
-    private String placeOfGrowth = "Sierra Leone";
+    private static String Stenofilla_PlaceOf_Growth = "Sierra Leone";
     /**
      * Поле - гіркота (від 1 до 5)
      */
-    private int bitterness = 4;
+    private static int Stenofilla_Bitterness = 4;
     /**
      * Поле - вмість кофеїну (у мг)
      */
-    private int caffeine = 40;
+    private static int Stenofilla_Caffeine = 40;
 
     /**
      * Конструктор - створення нового об'єкту з певними значеннями
@@ -31,6 +31,9 @@ public class Stenofilla extends Coffee {
      */
     public Stenofilla(String packing, String state, int weight, int pricePerKg, int quality) {
 	super(packing, state, weight, pricePerKg, quality);
+	setPlaceOfGrowth(Stenofilla_PlaceOf_Growth);
+	setBitterness(Stenofilla_Bitterness);
+	setCaffeine(Stenofilla_Caffeine);
     }
 
     /**
@@ -45,9 +48,9 @@ public class Stenofilla extends Coffee {
 	sb.append("; weight: ").append(getWeight());
 	sb.append("; pricePerKg: ").append(getPrice());
 	sb.append("; quality: ").append(getQuality());
-	sb.append("; placeOfGrowth: ").append(placeOfGrowth);
-	sb.append("; bitterness: ").append(bitterness);
-	sb.append("; caffeine: ").append(caffeine);
+	sb.append("; placeOfGrowth: ").append(getPlaceOfGrowth());
+	sb.append("; bitterness: ").append(getBitterness());
+	sb.append("; caffeine: ").append(getCaffeine());
 	return sb.toString();
     }
 }

@@ -2,6 +2,14 @@ package ip94.dolgova.Lab4;
 
 import java.util.*;
 
+import ip94.dolgova.Lab6.Arabica;
+import ip94.dolgova.Lab6.Excelsa;
+import ip94.dolgova.Lab6.Liberica;
+import ip94.dolgova.Lab6.PriceComparator;
+import ip94.dolgova.Lab6.Robusta;
+import ip94.dolgova.Lab6.Stenofilla;
+import ip94.dolgova.Lab6.Van;
+
 /**
  * Main class
  * 
@@ -28,7 +36,7 @@ public class Lab4 {
 
 	Arrays.sort(clothes, new Comparator<Clothes>() {
 	    public int compare(Clothes o1, Clothes o2) {
-		return o1.name.compareTo(o2.getName());
+		return o1.getName().compareTo(o2.getName());
 	    }
 	});
 
@@ -38,7 +46,7 @@ public class Lab4 {
 
 	Arrays.sort(clothes, Collections.reverseOrder(new Comparator<Clothes>() {
 	    public int compare(Clothes o1, Clothes o2) {
-		return ((Integer) o1.length).compareTo(o2.getLength());
+		return ((Integer) o1.getLength()).compareTo(o2.getLength());
 	    }
 	}));
 

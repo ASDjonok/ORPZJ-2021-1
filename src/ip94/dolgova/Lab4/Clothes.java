@@ -10,23 +10,23 @@ public class Clothes {
     /**
      * Field - name
      */
-    String name;
+    private String name;
     /**
      * Field - color
      */
-    String color;
+    private String color;
     /**
      * Field - size
      */
-    int size;
+    private int size;
     /**
      * Field - length
      */
-    int length;
+    private int length;
     /**
      * Field - width
      */
-    int width;
+    private int width;
 
     /**
      * Constructor - creating a new object with certain parameters
@@ -38,11 +38,11 @@ public class Clothes {
      * @param w width
      */
     Clothes(String name, String color, int size, int length, int width) {
-	this.name = name;
-	this.color = color;
-	this.size = size;
-	this.length = length;
-	this.width = width;
+	setName(name);
+	setColor(color);
+	setSize(size);
+	setLength(length);
+	setWidth(width);
     }
 
     /**
@@ -55,15 +55,47 @@ public class Clothes {
     /**
      * Getting the name value
      */
-    String getName() {
+    public String getName() {
 	return name;
+    }
+
+    public void setName(String name) {
+	this.name = name;
+    }
+
+    public String getColor() {
+	return color;
+    }
+
+    public void setColor(String color) {
+	this.color = color;
     }
 
     /**
      * Getting the length value
      */
-    int getLength() {
+    public int getLength() {
 	return length;
+    }
+
+    public void setLength(int length) {
+	this.length = length;
+    }
+
+    public int getSize() {
+	return size;
+    }
+
+    public void setSize(int size) {
+	this.size = size;
+    }
+
+    public int getWidth() {
+	return size;
+    }
+
+    public void setWidth(int width) {
+	this.width = width;
     }
 
 }

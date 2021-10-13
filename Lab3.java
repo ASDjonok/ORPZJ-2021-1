@@ -4,12 +4,12 @@ import java.util.StringTokenizer;
 public class Lab3 {
     public static void main(String[] args) {
 
-        StringBuffer text = new StringBuffer("Эта пРоГрАмА удаляет слова с согласными буквами на первом МЕСТЕ");
+        StringBuffer text = new StringBuffer("Три осенних месяца совершенно не похожи друг на друга . Сентябрь – теплый и красивый , октябрь – прохладный и дождливый , а ноябрь – морозный и холодный . Но все они несут нам что-то новое . Мне нравится каждый из них по-своему . Именно осень дарит нам бабье лето и проливные грозы , первые морозы и последнюю теплоту .");
         System.out.println(text);
 
         StringTokenizer st = new StringTokenizer(text.toString(), " ");
         ArrayList<String> list
-                = new ArrayList<String>();
+                = new ArrayList<>();
 
         while (st.hasMoreTokens()) {
             list.add(st.nextToken());
@@ -25,8 +25,14 @@ public class Lab3 {
 
         StringBuffer sb = new StringBuffer();
 
+        //Визначаю, яка довжина мого кожного слова тексту
         for (int i = 0; i < list.size(); i++) {
-            if (!isConsonant(list.get(i))) {
+            System.out.println(list.get(i) + ": " + list.get(i).length());
+        }
+
+        int len = 7;
+        for (int i = 0; i < list.size(); i++) {
+            if (!isConsonant(list.get(i)) || (list.get(i).length() != len)) {
                 sb.append(list.get(i)).append(" ");
             }
         }

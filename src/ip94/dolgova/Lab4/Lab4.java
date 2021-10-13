@@ -2,14 +2,6 @@ package ip94.dolgova.Lab4;
 
 import java.util.*;
 
-import ip94.dolgova.Lab6.Arabica;
-import ip94.dolgova.Lab6.Excelsa;
-import ip94.dolgova.Lab6.Liberica;
-import ip94.dolgova.Lab6.PriceComparator;
-import ip94.dolgova.Lab6.Robusta;
-import ip94.dolgova.Lab6.Stenofilla;
-import ip94.dolgova.Lab6.Van;
-
 /**
  * Main class
  * 

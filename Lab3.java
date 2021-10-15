@@ -5,7 +5,7 @@ public class Lab3 {
     public static void main(String[] args) {
 
         //StringBuffer text = new StringBuffer("Три осенних месяца совершенно не похожи друг на друга . Сентябрь – теплый и красивый , октябрь – прохладный и дождливый , а ноябрь – морозный и холодный . Но все они несут нам что-то новое . Мне нравится каждый из них по-своему . Именно осень дарит нам бабье лето и проливные грозы , первые морозы и последнюю теплоту .");
-        StringBuffer text = new StringBuffer("Почему прогаа! не удаляет текстт?");
+        StringBuffer text = new StringBuffer("Почему прогаа! удаляет текстт?");
         System.out.println(text);
 
         StringTokenizer st = new StringTokenizer(text.toString(), " ");
@@ -22,12 +22,7 @@ public class Lab3 {
             System.out.println(li);
         }
 
-//        for(int i = 0; i < list.size(); i++) {
-//            if(list.get(i).contains("?") || list.get(i).contains(",") || list.get(i).contains(".") || list.get(i).contains(":") || list.get(i).contains(";")){
-//                System.out.println(list.get(i));
-//            }
-//        }
-//        System.out.println("----------------------");
+        System.out.println("----------------------");
 
         StringBuffer sb = new StringBuffer();
 
@@ -38,7 +33,7 @@ public class Lab3 {
 
         int len = 7;
         for (int i = 0; i < list.size(); i++) {
-            if (!isConsonant(list.get(i)) || (list.get(i).length() != len || list.get(i).contains("[^0-9]"))) {
+            if (!isConsonant(list.get(i)) || (list.get(i).length() != len || !list.get(i).contains("[^0-9]"))) {
                     sb.append(list.get(i)).append(" ");
             }
         }

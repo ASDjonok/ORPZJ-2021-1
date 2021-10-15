@@ -5,7 +5,7 @@ public class Lab3 {
     public static void main(String[] args) {
 
         //StringBuffer text = new StringBuffer("Три осенних месяца совершенно не похожи друг на друга . Сентябрь – теплый и красивый , октябрь – прохладный и дождливый , а ноябрь – морозный и холодный . Но все они несут нам что-то новое . Мне нравится каждый из них по-своему . Именно осень дарит нам бабье лето и проливные грозы , первые морозы и последнюю теплоту .");
-        StringBuffer text = new StringBuffer("Почему прогаа! удаляет текстт?");
+        StringBuffer text = new StringBuffer("Почему програа удаляет этот текстт?");
         System.out.println(text);
 
         StringTokenizer st = new StringTokenizer(text.toString(), " ");
@@ -18,9 +18,9 @@ public class Lab3 {
 
         System.out.println("----------------------");
 
-        for (String li : list) {
-            System.out.println(li);
-        }
+//        for (String li : list) {
+//            System.out.println(li);
+//        }
 
         System.out.println("----------------------");
 
@@ -31,13 +31,26 @@ public class Lab3 {
             System.out.println(list.get(i) + ": " + list.get(i).length());
         }
 
+        String[] symbols = {".", ",", "/", "!", ")", "(", "*", "&", "?"};
+
         int len = 7;
         for (int i = 0; i < list.size(); i++) {
-            if (!isConsonant(list.get(i)) || (list.get(i).length() != len || !list.get(i).contains("[^0-9]"))) {
-                    sb.append(list.get(i)).append(" ");
+            if (!isConsonant(list.get(i)) || list.get(i).length() != len || !hasSymbol(list.get(i), symbols)) {
+                sb.append(list.get(i)).append(" ");
             }
         }
         System.out.println(sb);
+
+
+    }
+
+    public static boolean hasSymbol(String incomingText, String[] s) {
+        for (int i = 0; i < s.length; i++) {
+            if (incomingText.contains(s[i])) {
+                System.out.println("Fine");
+            }
+        }
+        return true;
     }
 
     public static boolean isConsonant(String incomingText) {

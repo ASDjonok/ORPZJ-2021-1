@@ -4,7 +4,6 @@ import java.util.StringTokenizer;
 public class Lab3 {
     public static void main(String[] args) {
 
-        //StringBuffer text = new StringBuffer("Три осенних месяца совершенно не похожи друг на друга . Сентябрь – теплый и красивый , октябрь – прохладный и дождливый , а ноябрь – морозный и холодный . Но все они несут нам что-то новое . Мне нравится каждый из них по-своему . Именно осень дарит нам бабье лето и проливные грозы , первые морозы и последнюю теплоту .");
         StringBuffer text = new StringBuffer("Почему програа удаляет этот текстт?");
         System.out.println(text);
 
@@ -17,10 +16,6 @@ public class Lab3 {
         }
 
         System.out.println("----------------------");
-
-//        for (String li : list) {
-//            System.out.println(li);
-//        }
 
         System.out.println("----------------------");
 
@@ -35,7 +30,6 @@ public class Lab3 {
 
         int len = 7;
         for (int i = 0; i < list.size(); i++) {
-            //якщо голосна буква на початку буква || length != 7
             if (!isConsonant(list.get(i)) || list.get(i).length() != len || hasSymbol(list.get(i), symbols)) {
                 sb.append(list.get(i)).append(" ");
             }
@@ -49,7 +43,6 @@ public class Lab3 {
             if (incomingText.contains(s[i])) {
                 System.out.println("Fine");
                 return true;
-            } else {
             }
         }
         return false;

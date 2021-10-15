@@ -35,12 +35,12 @@ public class Lab3 {
 
         int len = 7;
         for (int i = 0; i < list.size(); i++) {
-            if (!isConsonant(list.get(i)) || list.get(i).length() != len || !hasSymbol(list.get(i), symbols)) {
+            //якщо голосна буква на початку буква || length != 7
+            if (!isConsonant(list.get(i)) || list.get(i).length() != len || hasSymbol(list.get(i), symbols)) {
                 sb.append(list.get(i)).append(" ");
             }
         }
         System.out.println(sb);
-
 
     }
 
@@ -48,9 +48,11 @@ public class Lab3 {
         for (int i = 0; i < s.length; i++) {
             if (incomingText.contains(s[i])) {
                 System.out.println("Fine");
+                return true;
+            } else {
             }
         }
-        return true;
+        return false;
     }
 
     public static boolean isConsonant(String incomingText) {

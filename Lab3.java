@@ -17,8 +17,6 @@ public class Lab3 {
 
         System.out.println("----------------------");
 
-        System.out.println("----------------------");
-
         StringBuffer sb = new StringBuffer();
 
         //Визначаю, яка довжина мого кожного слова тексту
@@ -41,7 +39,6 @@ public class Lab3 {
     public static boolean hasSymbol(String incomingText, String[] s) {
         for (int i = 0; i < s.length; i++) {
             if (incomingText.contains(s[i])) {
-                System.out.println("Fine");
                 return true;
             }
         }

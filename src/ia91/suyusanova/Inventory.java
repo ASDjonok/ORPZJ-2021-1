@@ -12,23 +12,23 @@ public class Inventory {
     /**
      * поле - назва
      */
-    public String name;
+    private String name;
     /**
      * поле - виробник
      */
-    public String manufacturer;
+    private String manufacturer;
     /**
      * поле - ціна
      */
-    public int price;
+    private int price;
     /**
      * поле - вага
      */
-    public String weight;
+    private String weight;
     /**
      * поле - кількість
      */
-    public int quantity;
+    private int quantity;
 
     /**
      * конструктор

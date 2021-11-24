@@ -33,19 +33,20 @@ public class Main {
         bucket.addFlowerToBucket(c2);
         bucket.addFlowerToBucket(c3);
 
-        for (Flower f:
-             bucket.getBucketList()) {
+        for (Flower f: bucket.getBucketList()) {
             System.out.println(f.toString());
         }
-            System.out.println("After sort\n");
+        System.out.println("After sort\n");
         bucket.sortByLvl();
-            for (Flower f:
-                    bucket.getBucketList()) {
-                    System.out.println(f.toString());
-            }
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Enter down bound in diapason(min)");
-                    int min = scan.nextInt();
+        
+        for (Flower f: bucket.getBucketList()) {
+            System.out.println(f.toString());
+        }
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter down bound in diapason(min)");
+        int min = scan.nextInt();
+
         System.out.println("Enter up bound in diapason(max)");
         int max = scan.nextInt();
         System.out.println(bucket.flowerInDiapason(min,max).toString());

@@ -23,6 +23,8 @@ public class Flower implements Comparator<Flower> {
      */
     private int lvlLife;
 
+    protected String ClassName;
+
     /**
      * конструктор
      * @param color         - колір
@@ -36,6 +38,7 @@ public class Flower implements Comparator<Flower> {
         this.length = length;
         this.price = price;
         this.lvlLife = lvlLife;
+        this.ClassName = "Flower";
     }
 
     /**
@@ -98,6 +101,12 @@ public class Flower implements Comparator<Flower> {
         this.price = price;
     }
 
+
+    public String getClassName() { return this.ClassName; }
+    public void setClassName(String ClassName) {
+        this.ClassName = ClassName;
+    }
+
     /**
      * Функція порівняння
      */
@@ -109,5 +118,12 @@ public class Flower implements Comparator<Flower> {
             return -1;
         else
             return 0;
+    }
+
+    @Override
+    public String toString() {
+        String f = this.getClassName();
+        String s = f + " " + this.getColor() + ", length: " + this.getLength() + "level of live: " + this.getLvlLife() +", price: " + this.getPrice() + "$";
+        return s;
     }
 }

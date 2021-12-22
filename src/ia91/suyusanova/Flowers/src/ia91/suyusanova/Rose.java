@@ -16,10 +16,6 @@ public class Rose extends Flower{
 
     public Rose(String color, double length, double price, int lvlLife) {
         super(color, length, price, lvlLife);
-    }
-
-    @Override
-    public String toString() {
-        return "Rose:"  + super.getColor() + ", length: " + super.getLength() + ", level of live: " + super.getLvlLife() + ", price: " + super.getPrice() + "$";
+        this.ClassName = "Rose";
     }
 }

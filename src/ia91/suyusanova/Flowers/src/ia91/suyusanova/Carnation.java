@@ -16,11 +16,7 @@ public class Carnation extends Flower {
 
     public Carnation(String color, double length, double price, int lvlLife) {
         super(color, length, price, lvlLife);
-    }
-
-    @Override
-    public String toString() {
-        return "Carnation "  + super.getColor() + ", length: " + super.getLength() + "level of live: " + super.getLvlLife() +", price: " + super.getPrice() + "$";
+        this.ClassName = "Carnation";
     }
 }
 
